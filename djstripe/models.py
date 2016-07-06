@@ -382,7 +382,7 @@ class Customer(StripeCustomer):
         )
 
     def subscribe(self, plan, quantity=1, trial_days=None,
-                  charge_immediately=True, prorate=djstripe_settings.PRORATION_POLICY, coupon=coupon):
+                  charge_immediately=True, prorate=djstripe_settings.PRORATION_POLICY, coupon=None):
         stripe_customer = self.stripe_customer
         """
         Trial_days corresponds to the value specified by the selected plan
